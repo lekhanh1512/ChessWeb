@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useLocation} from "react-router-dom";
 import { ChevronDown, ChevronRight } from "lucide-react";
 import { SidebarContext } from "./SidebarContext";
 
@@ -22,16 +22,16 @@ const SidebarItem: React.FC<SidebarItemProps> = ({
   children,
 }) => {
   const { isCollapsed } = useContext(SidebarContext);
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   const location = useLocation();
 
   const isParentActive = children?.some(
     (child) => location.pathname === child.to
   );
 
-  const handleNavigation = (path: string) => {
-    navigate(path);
-  };
+  // const handleNavigation = (path: string) => {
+  //   navigate(path);
+  // };
 
   return (
     <div
